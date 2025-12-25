@@ -11,13 +11,13 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize( window.innerWidth, window.innerHeight );
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const texture = new THREE.TextureLoader().load('aurora-logo.jpg')
+const texture = new THREE.TextureLoader().load('public/aurora-logo.jpg')
 const material = new THREE.MeshBasicMaterial({map: texture});
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
 const donut_geo = new THREE.TorusGeometry(10, 3, 16, 100);
-const donut_texture = new THREE.TextureLoader().load('aurora-bg.jpg');
+const donut_texture = new THREE.TextureLoader().load('public/aurora-bg.jpg');
 const donut_tex = new THREE.MeshBasicMaterial({ map: donut_texture });
 const donut = new THREE.Mesh(donut_geo, donut_tex);
 scene.add(donut);
